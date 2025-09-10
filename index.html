@@ -12,20 +12,42 @@
       color: #1e293b;
     }
 
-    /* Header */
+    /* ===== Header ===== */
     header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between; /* logo bên trái, menu bên phải */
+      padding: 16px 24px;
       background: linear-gradient(90deg, #3b82f6, #9333ea);
       position: sticky;
       top: 0;
       z-index: 10;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
+
+    /* Logo text */
+    .logo-text {
+      font-size: 1.8rem;
+      font-weight: 700;
+      text-decoration: none;
+      color: #fff; /* màu chữ logo */
+      letter-spacing: 1px;
+      transition: transform 0.2s, opacity 0.3s;
+    }
+    .logo-text span {
+      color: #ffdd57; /* nhấn mạnh chữ Quang */
+    }
+    .logo-text:hover {
+      opacity: 0.85;
+      transform: scale(1.05);
+    }
+
+    /* Navigation menu */
     .nav {
       display: flex;
-      justify-content: center;
       gap: 20px;
-      padding: 14px;
       margin: 0;
+      padding: 0;
     }
     .nav > li {
       list-style: none;
@@ -69,7 +91,7 @@
       display: block;
     }
 
-    /* Main hero section */
+    /* ===== Main hero section ===== */
     main {
       display: flex;
       justify-content: center;
@@ -100,6 +122,7 @@
       display: flex;
       justify-content: center;
       gap: 16px;
+      flex-wrap: wrap;
     }
     .btn {
       display: inline-block;
@@ -121,7 +144,34 @@
       background: #7e22ce;
     }
 
-    /* Footer */
+    /* Features section */
+    .features {
+      margin-top: 40px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+      text-align: center;
+    }
+    .card h2 {
+      margin-bottom: 12px;
+      font-size: 1.4rem;
+    }
+    .card p {
+      margin-bottom: 16px;
+      color: #475569;
+    }
+    .btn.small {
+      padding: 8px 16px;
+      font-size: 0.9rem;
+    }
+
+    /* ===== Footer ===== */
     footer {
       background: #1e293b;
       color: #cbd5e1;
@@ -130,45 +180,14 @@
       font-size: 0.9rem;
     }
   </style>
-  <style>
-    body {
-      margin: 0;
-      font-family: "Segoe UI", Arial, sans-serif;
-      background: #f8f9fa;
-    }
-
-    header {
-      display: flex;
-      align-items: center;
-      padding: 16px 24px;
-      background: white;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-
-    .logo-text {
-      font-size: 1.8rem;
-      font-weight: 700;
-      text-decoration: none;
-      color: #111;
-      letter-spacing: 1px;
-    }
-
-    .logo-text span {
-      color: #e63946; /* đổi màu phần "Site" */
-    }
-
-    /* hiệu ứng hover */
-    .logo-text:hover {
-      opacity: 0.8;
-    }
-  </style>
 </head>
-  <header>
-    <a href="/" class="logo-text">My<span>Site</span></a>
-  </header>
 <body>
   <!-- Header -->
   <header>
+    <!-- Logo chữ -->
+    <a href="/" class="logo-text">B<span>Quang</span></a>
+
+    <!-- Navigation menu -->
     <ul class="nav">
       <li>
         <a href="#">Giáo trình</a>
@@ -185,30 +204,30 @@
 
   <!-- Main -->
   <main>
-  <!-- Hero Section -->
-  <div class="hero">
-    <h1>Chào mừng đến trang menu của BQuang</h1>
-    <p>Nơi tổng hợp giáo trình và bài giảng hỗ trợ học tập của bạn.</p>
-    <div class="actions">
-      <a href="#" class="btn">Xem Giáo trình</a>
-      <a href="baigiang.html" class="btn secondary">Xem Bài giảng</a>
-    </div>
-  </div>
+    <!-- Hero Section -->
+    <div class="hero">
+      <h1>Chào mừng đến trang menu của BQuang</h1>
+      <p>Nơi tổng hợp giáo trình và bài giảng hỗ trợ học tập của bạn.</p>
+      <div class="actions">
+        <a href="#" class="btn">Xem Giáo trình</a>
+        <a href="baigiang.html" class="btn secondary">Xem Bài giảng</a>
+      </div>
 
-  <!-- Features Section -->
-  <section class="features">
-    <div class="card">
-      <h2>📘 Giáo trình</h2>
-      <p>Tổng hợp tài liệu học tập các môn cơ bản: Toán, Vật lý, Hóa học.</p>
-      <a href="#" class="btn small">Xem ngay</a>
+      <!-- Features Section -->
+      <section class="features">
+        <div class="card">
+          <h2>📘 Giáo trình</h2>
+          <p>Tổng hợp tài liệu học tập các môn cơ bản: Toán, Vật lý, Hóa học.</p>
+          <a href="#" class="btn small">Xem ngay</a>
+        </div>
+        <div class="card">
+          <h2>🎥 Bài giảng</h2>
+          <p>Video giảng dạy chi tiết, giúp bạn dễ dàng nắm vững kiến thức.</p>
+          <a href="baigiang.html" class="btn secondary small">Khám phá</a>
+        </div>
+      </section>
     </div>
-    <div class="card">
-      <h2>🎥 Bài giảng</h2>
-      <p>Video giảng dạy chi tiết, giúp bạn dễ dàng nắm vững kiến thức.</p>
-      <a href="baigiang.html" class="btn secondary small">Khám phá</a>
-    </div>
-  </section>
-</main>
+  </main>
 
   <!-- Footer -->
   <footer>
