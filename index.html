@@ -3,20 +3,87 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Trang menu của BQuang</title>
+  <title>Trang menu đơn giản</title>
   <style>
-    body{margin:0;font-family:Inter,system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial;background:#f8fafc;color:#0f172a}
-    header{background:#fff;border-bottom:1px solid #e2e8f0;position:sticky;top:0;z-index:10}
-    .nav{display:flex;justify-content:center;gap:20px;padding:14px;position:relative}
-    .nav > li{list-style:none;position:relative}
-    .nav a{text-decoration:none;color:#0f172a;font-weight:500;padding:8px 16px;border-radius:8px;transition:background .2s;display:block}
-    .nav a:hover{background:#e2e8f0}
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f0f4f8;
+      color: #1e293b;
+    }
+    header {
+      background: linear-gradient(90deg, #3b82f6, #9333ea);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .nav {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 14px;
+      position: relative;
+    }
+    .nav > li {
+      list-style: none;
+      position: relative;
+    }
+    .nav a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: 500;
+      padding: 8px 16px;
+      border-radius: 6px;
+      transition: background .2s;
+      display: block;
+    }
+    .nav a:hover {
+      background: rgba(255,255,255,0.2);
+    }
     /* Dropdown */
-    .dropdown{display:none;position:absolute;top:100%;left:0;background:#fff;box-shadow:0 4px 12px rgba(0,0,0,0.08);border-radius:8px;min-width:220px;padding:8px 0;z-index:100}
-    .dropdown a{padding:10px 16px;white-space:nowrap}
-    .nav > li:hover .dropdown{display:block}
-    main{display:flex;justify-content:center;align-items:center;height:80vh;text-align:center}
-    h1{font-size:clamp(1.8rem,4vw,2.8rem)}
+    .dropdown {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: #fff;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      border-radius: 8px;
+      min-width: 220px;
+      padding: 8px 0;
+      z-index: 100;
+    }
+    .dropdown a {
+      color: #1e293b;
+      padding: 10px 16px;
+      white-space: nowrap;
+    }
+    .dropdown a:hover {
+      background: #f1f5f9;
+    }
+    .nav > li:hover .dropdown {
+      display: block;
+    }
+    main {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 80vh;
+      text-align: center;
+      padding: 20px;
+    }
+    h1 {
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      color: #334155;
+    }
+    footer {
+      background: #1e293b;
+      color: #cbd5e1;
+      text-align: center;
+      padding: 14px;
+      font-size: 0.9rem;
+    }
   </style>
 </head>
 <body>
@@ -36,7 +103,11 @@
   </header>
 
   <main>
-    <h1>Chào mừng bạn đến với trang menu</h1>
+    <h1>Chào mừng đến trang menu của BQuang</h1>
   </main>
+
+  <footer>
+    © 2025 Trang Menu — Thiết kế đơn giản với HTML & CSS
+  </footer>
 </body>
 </html>
