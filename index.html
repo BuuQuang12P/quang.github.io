@@ -1,32 +1,42 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Giới thiệu bản thân</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #f4f4f4;
-            color: #333;
-            padding: 20px;
-            max-width: 800px;
-            margin: auto;
-        }
-        h1 {
-            color: #0066cc;
-        }
-        .avatar {
-            width: 150px;
-            border-radius: 50%;
-        }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Trang menu đơn giản</title>
+  <style>
+    body{margin:0;font-family:Inter,system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial;background:#f8fafc;color:#0f172a}
+    header{background:#fff;border-bottom:1px solid #e2e8f0;position:sticky;top:0;z-index:10}
+    .nav{display:flex;justify-content:center;gap:20px;padding:14px;position:relative}
+    .nav > li{list-style:none;position:relative}
+    .nav a{text-decoration:none;color:#0f172a;font-weight:500;padding:8px 16px;border-radius:8px;transition:background .2s;display:block}
+    .nav a:hover{background:#e2e8f0}
+    /* Dropdown */
+    .dropdown{display:none;position:absolute;top:100%;left:0;background:#fff;box-shadow:0 4px 12px rgba(0,0,0,0.08);border-radius:8px;min-width:180px;padding:8px 0}
+    .dropdown a{padding:10px 16px;white-space:nowrap}
+    .nav > li:hover .dropdown{display:block}
+    main{display:flex;justify-content:center;align-items:center;height:80vh;text-align:center}
+    h1{font-size:clamp(1.8rem,4vw,2.8rem)}
+  </style>
 </head>
 <body>
-    <h1>Xin chào, mình là Huy!</h1>
-    <img src="https://via.placeholder.com/150" alt="Ảnh đại diện" class="avatar">
-    <p>Mình là một nhà phát triển web đam mê công nghệ và thiết kế.</p>
-    <p>Liên hệ: <a href="mailto:huy@example.com">huy@example.com</a></p>
+  <header>
+    <ul class="nav">
+      <li>
+        <a href="#">Giáo trình</a>
+        <div class="dropdown">
+          <a href="giaotrinh_giaitich1.html">Giải tích 1</a>
+          <a href="giaotrinh_vatly1.html">Vật Lý 1</a>
+          <a href="giaotrinh_daiso.html">Đại số tuyến tính</a>
+          <a href="giaotrinh_hoa.html">Hóa đại cương</a>
+        </div>
+      </li>
+      <li><a href="baigiang.html">Bài giảng</a></li>
+    </ul>
+  </header>
+
+  <main>
+    <h1>Chào mừng bạn đến với trang menu</h1>
+  </main>
 </body>
 </html>
-
